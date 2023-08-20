@@ -11,7 +11,7 @@
 //     return fib
 // }
 
-// console.log(fibonacci(7))
+// console.log(fibonacci(10))
 //above function is work as O(n) =>time comlexity
 //bcoz there is one loop = O(n)
 //so bid-O=O(n)
@@ -104,26 +104,56 @@
 //'t', find the index of 't', in the array ,
 //return -1 if the target is not found
 
-let arr = [-5, 2, 10, 4, 6];
-function indexTarget(n){
-    return arr.indexOf(n)
-}
-console.log(indexTarget(10));//2
-console.log(indexTarget(6));// 4
-console.log(indexTarget(20));//-1
+// let arr = [-5, 2, 10, 4, 6];
+// function indexTarget(n){
+//     return arr.indexOf(n)
+// }
+// console.log(indexTarget(10));//2
+// console.log(indexTarget(6));// 4
+// console.log(indexTarget(20));//-1
 //the big-O is O(1) const time complex
 
 //function for loop 
 
-function linearSearch(arr,target) {
-    for(let i=0;i<arr.length;i++){
-        if(arr[i]===target){
-            return i;
-        }
-    }return -1;
-}
-console.log(linearSearch([-5, 2, 10, 4, 6],10));//2
-console.log(linearSearch([-5, 2, 10, 4, 6],6));//4
-console.log(linearSearch([-5, 2, 10, 4, 6],20));//-1
+// function linearSearch(arr,target) {
+//     for(let i=0;i<arr.length;i++){
+//         if(arr[i]===target){
+//             return i;
+//         }
+//     }return -1;
+// }
+// console.log(linearSearch([-5, 2, 10, 4, 6],10));//2
+// console.log(linearSearch([-5, 2, 10, 4, 6],6));//4
+// console.log(linearSearch([-5, 2, 10, 4, 6],20));//-1
 
-// the big-O is O(n) bcoz here one for loop
+// // the big-O is O(n) bcoz here one for loop
+
+
+//binary search
+//given a sorted array if 'n', elements and a target element 't'
+//find the index of 't' in the array. return -1 if the target element is not found
+
+// let array = [-5, 2, 4, 6, 10];
+// function binary(arr,t){
+//     let leftIndex = 0;
+//     let rightIndex = arr.length-1;
+//     while(leftIndex<=rightIndex){
+//         let midIndex = Math.floor((leftIndex + rightIndex)/2);
+//         if(t===arr[midIndex]){
+//             return midIndex;
+//         }
+//         if(t<arr[midIndex]){
+//             rightIndex=midIndex-1;
+//         }else{
+//             leftIndex=midIndex+1;
+//         }
+//     }
+//     return -1
+// }
+// console.log(binary(array,10));//4
+// console.log(binary(array,2));//1
+// console.log(binary(array,6));//3
+// console.log(binary(array,20));//-1
+
+// the big - O  is O(logn) by assumption the input is reduce by half when looping so 
+
